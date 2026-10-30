@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AishFad | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header & Logo -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="AF Monogram Logo" class="site-logo">
+            <span class="logo-text">AishFad</span>
+        </div>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle Theme">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav" aria-label="Main Navigation">
+        <ul>
+            <li>
+                <a href="#home" class="nav-link active">
+                    <span class="bullet"></span>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="nav-link">
+                    <span class="bullet"></span>
+                    <span class="nav-text">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="nav-link">
+                    <span class="bullet"></span>
+                    <span class="nav-text">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link">
+                    <span class="bullet"></span>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="section hero-section">
+            <div class="hero-text">
+                <!-- Dynamic Greeting -->
+                <p class="greeting-tag" id="dynamic-greeting">HELLO, I'M</p>
+                <h1 class="hero-name">Aisah</h1>
+                <h2 class="hero-subtitle">Building Ideas Into Digital Experiences</h2>
+                <p class="hero-description">
+                    A Network Computing student passionate about technology, problem-solving, 
+                    and creating meaningful digital solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="hero-image-wrapper">
+                <div class="paint-brush-bg"></div>
+                <div class="aesthetic-frame">
+                    <img src="profile.jpg" alt="Aisah Profile Picture" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT -->
+        <section id="about" class="section about-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>My Journey</h3>
+                    <p>
+                        Hi, I am Siti Aisah Binti Fadzli, a 23 years old student currently pursuing a degree in Network Computing at Universiti Malaysia Sarawak (UNIMAS). I am from Selangor and have an interest in technology, web design, and exploring new ideas. I enjoy learning new skills, expressing my creativity, and developing my knowledge in the field of computing. Through my studies and projects, I hope to grow as a developer and create digital experiences that are practical, meaningful, and enjoyable to use.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <h3>Technical Skills</h3>
+                    <ul class="skills-tags">
+                        <li>HTML</li>
+                        <li>MySQL</li>
+                        <li>C++</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>UI/UX Design</li>
+                        <li>Word</li>
+                        <li>Excel</li>
+                        <li>PowerPoint</li>
+                        <li>Canva</li>
+                        <li>Scratch</li>
+                        <li>Figma Mobile UI/UX</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROJECTS -->
+        <section id="projects" class="section projects-section">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">A showcase of my recent academic & personal work</p>
+
+            <!-- Project Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="web">Web Dev</button>
+                <button class="filter-btn" data-category="design">Design</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Anggun Aura -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge">Web Store</div>
+                    <h3>Anggun Aura</h3>
+                    <p>An online store showcasing handcrafted accessories with soft pastel color palettes and interactive shopping UI.</p>
+                    <button class="btn-modal" onclick="openModal('Anggun Aura Accessories', 'Designed and developed a responsive online accessory store called Anggun Aura. Features soft aesthetic UI, dynamic product showcases, and interactive browsing.', 'anggun-aura.png')">View Details</button>
+                </article>
+
+                <!-- Project 2: Image Augmentation -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge">Deep Learning</div>
+                    <h3>Image Augmentation Analysis</h3>
+                    <p>A comparative study evaluating how synthetic data expansion (like spatial rotation) enhances ResNet-18 model generalization.</p>
+                    <button class="btn-modal" onclick="openModal(
+                        'Image Augmentation Effect Analysis', 
+                        'Evaluated the impact of spatial image transformations (such as rotation and scaling) on deep learning generalization using a pretrained ResNet-18 architecture. The study demonstrates how synthetic dataset expansion prevents model overfitting and forces invariant feature extraction.', 
+                        'Augmentation CAT.jpg'
+                    )">View Details</button>
+                </article>
+
+                <!-- Project 3: Cybersecurity Phishing Simulation -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge">Cybersecurity</div>
+                    <h3>Social Engineering Simulation</h3>
+                    <p>An educational cybersecurity project demonstrating phishing mechanisms and credential harvesting via a cloned login UI.</p>
+                    <button class="btn-modal" onclick="openModal(
+                        'Instagram Phishing & Credential Harvesting Simulation', 
+                        'Developed a cloned Instagram authentication interface for educational purposes in a Cybersecurity coursework module. The project demonstrates social engineering attack vectors and credential harvesting mechanisms, emphasizing web security awareness, input validation, and defensive countermeasures against phishing.', 
+                        'Instagram.png'
+                    )">View Details</button>
+                </article>
+
+                <!-- Project 4: Kuching ART App -->
+                <article class="project-card" data-category="design">
+                    <div class="project-badge">UI/UX Design</div>
+                    <h3>Kuching ART Transit App</h3>
+                    <p>A mobile UI/UX prototype designed for the Autonomous Rapid Transit (ART) public transportation network in Kuching, Sarawak.</p>
+                    <button class="btn-modal" onclick="openModal(
+                        'Kuching Autonomous Rapid Transit (ART) Mobile App', 
+                        'Designed an intuitive mobile app UI/UX prototype for Kuching Autonomous Rapid Transit (ART) system. Features interactive route planning, live schedule tracking, and seamless ticketing UI to enhance public transportation accessibility across Sarawak.', 
+                        'ART.png'
+                    )">View Details</button>
+                </article>
+
+                <!-- Project 5: Velvet Boutique C++ System -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge">C++ Application</div>
+                    <h3>Velvet Boutique Order System</h3>
+                    <p>A C++ CLI console application designed for boutique inventory tracking, automated order processing, and sales reporting.</p>
+                    <button class="btn-modal" onclick="openModal(
+                        'Velvet Boutique Management System', 
+                        'Built an interactive CLI-based boutique order management system in C++. Features structured menu navigation for automated price calculation across 11 clothing categories, customer search records, finalized order receipts, and summary sales reporting.', 
+                        'Velvet.png'
+                    )">View Details</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CONTACT -->
+        <section id="contact" class="section contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Feel free to drop me an email or connect with me on LinkedIn!</p>
+
+            <div class="contact-container">
+                <div class="contact-cards-wrapper">
+
+                    <!-- Email Link -->
+                    <a href="mailto:101034@siswa.unimas.my" class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-info">
+                            <h4>Email Me</h4>
+                            <p>101034@siswa.unimas.my</p>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn Link -->
+                    <a href="https://www.linkedin.com/in/siti-aisah-binti-fadzli-a8a694376" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-info">
+                            <h4>LinkedIn</h4>
+                            <p>View My LinkedIn Profile</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <!-- Dynamic Year -->
+            <p>&copy; <span id="year"></span> AishFad.</p>
+        </footer>
+
+    </main>
+
+    <!-- Scroll To Top Button -->
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <!-- Project Modal Popup -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Project Preview" class="modal-img">
+            <h3 id="modalTitle">Project Title</h3>
+            <p id="modalDescription">Project details go here...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
